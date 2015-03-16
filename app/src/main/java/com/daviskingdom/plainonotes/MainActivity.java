@@ -2,16 +2,32 @@ package com.daviskingdom.plainonotes;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.daviskingdom.plainonotes.data.NoteItem;
+import com.daviskingdom.plainonotes.data.NotesDataSource;
+
+import java.util.List;
+
 
 public class MainActivity extends ActionBarActivity {
+
+    private NotesDataSource dataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        dataSource = new NotesDataSource();
+        List<NoteItem> notes = dataSource.findAll();
+        NoteItem note = notes.get(0);
+
+        Log.i("NOTES", note.getKey());
+        Log.i("TEST", "**********************************************************************************************************************************************************************************************");
+
     }
 
 
