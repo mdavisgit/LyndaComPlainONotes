@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Plain O Notes</string>
+
+    <string name="hello_world">Hello from Plain O Notes!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Checkbox1">First Checkbox</string>
+</resources>
